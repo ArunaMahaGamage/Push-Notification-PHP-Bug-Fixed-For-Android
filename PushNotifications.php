@@ -3,7 +3,9 @@
 class PushNotifications {
 
 	// (Android)API access key from Google API's Console.
-	private static $API_ACCESS_KEY = 'AAAAzazb_a4:APA91bHeCGzzVIqZzW8Cz3gCxOFVCvLHqNv3HkL5ORBTUdhCXzz5wh7u8zskiPrlBvtpBrRPmlnKWz2CxKjdTSJHUU4ZKexfdJZvLCTHBDtqw4RaVPIL20btSPp9xIRgrKgw4zJyJ5Kx';
+	/*private static $API_ACCESS_KEY = 'AAAAzazb_a4:APA91bHeCGzzVIqZzW8Cz3gCxOFVCvLHqNv3HkL5ORBTUdhCXzz5wh7u8zskiPrlBvtpBrRPmlnKWz2CxKjdTSJHUU4ZKexfdJZvLCTHBDtqw4RaVPIL20btSPp9xIRgrKgw4zJyJ5Kx';
+*/
+private static $API_ACCESS_KEY = 'AAAApKkz1nI:APA91bGXOVwVJSx-VQDmpJlSBeuUPO0XRAr7NSTsic5NY53C5RROlP3tg0SC9mhO46z0Gw5pktOw5KokhJXaOaaA0GAh8GsMhVWRjMhLR-7WmQWQnLlv4iHF-2pIK25mtS1bxRpXYI3y';
 	// (iOS) Private key's passphrase.
 	private static $passphrase = 'joashp';
 	// (Windows Phone 8) The name of our push channel.
@@ -20,11 +22,11 @@ class PushNotifications {
         $url = 'https://android.googleapis.com/gcm/send';
         $message = array(
             'title' => $data['mtitle'],
-            'message' => $data['mdesc'],
-            'subtitle' => 'ssdsds',
-            'tickerText' => 'cdddd',
-            'msgcnt' => 1,
-            'vibrate' => 1
+            //'message' => $data['mtitle'],
+            'body' => $data['mtitle'],
+           // 'tickerText' => $data['mtitle'],
+         //   'msgcnt' => 1,
+          //  'vibrate' => 1
         );
 
 
